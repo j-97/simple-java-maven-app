@@ -1,8 +1,6 @@
 pipeline {
     agent { label 'master' }
-    tools{
-        maven 'M1'
-    }
+    
     stages {
         stage('Build') { 
             steps {
