@@ -1,8 +1,7 @@
 pipeline {
     agent { label 'master' }
     tools{
-        maven 'maven 3'
-        jdk 'java 8'
+        maven 'M1'
     }
     stages {
         stage('Build') { 
