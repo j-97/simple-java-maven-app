@@ -1,12 +1,12 @@
 pipeline {
     agent { label 'MyDocker' }
-    tools{
-        maven 'M1'
-    }
+    
     stages {
         stage('Build') { 
             steps {
-                sh 'mvn -B -DskipTests clean package' 
+                docker.image('maven:3.3.3-jdk-8').inside {
+                    sh 'mvn -B clean install'
+                }
             }
         }
         stage('Test') {
@@ -26,3 +26,4 @@ pipeline {
         }
     }
 }
+
