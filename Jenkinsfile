@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Build') { 
             steps {
-                docker.image('maven:3.3.3-jdk-8').inside {
+                @docker.image('maven:3.3.3-jdk-8').inside {
                     sh 'mvn -B clean install'
                 }
             }
