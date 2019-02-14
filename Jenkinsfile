@@ -1,7 +1,7 @@
 pipeline {
     agent { label 'master' }
    tools{
-       maven "M1"
+       maven "Maven"
    }
     stages {
         stage('Build') { 
