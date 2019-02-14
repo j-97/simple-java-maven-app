@@ -7,7 +7,7 @@ pipeline {
         stage('Build') { 
             
             steps {
-                sh 'cd "/Users/jbajpai1/Downloads/apache-maven-3.6.0"'
+                sh 'cd "//Users//jbajpai1//Downloads//apache-maven-3.6.0"'
                 sh 'mvn -B -DskipTests clean package' 
                 sh 'echo "hello there"'
                 sh '''
