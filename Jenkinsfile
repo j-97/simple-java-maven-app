@@ -33,10 +33,10 @@ pipeline {
             steps {
                 sh './jenkins/scripts/deliver.sh' 
                 sh '''
-                    docker build -t mavenapp .
-                    docker tag mavenapp jagriti97/mavenapp
-                    docker login https://docker.optum.com -u jagriti97 -p Jbnk@1997
-                    docker push jagriti97/mavenapp
+                    docker build -t mavenapp1 .
+                    docker tag mavenapp1 jagriti97/mavenapp1
+                    docker login -u jagriti97 -p Jbnk@1997
+                    docker push jagriti97/mavenapp1
                     docker image prune -f
                 '''
             }
