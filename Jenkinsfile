@@ -35,7 +35,6 @@ pipeline {
                 sh '''
                     docker build -t mavenapp .
                     docker tag mavenapp jagriti97/mavenapp
-                    docker login https://docker.optum.com -u jagriti97 -p Jbnk@1997
                     docker push jagriti97/mavenapp
                     docker image prune -f
                 '''
